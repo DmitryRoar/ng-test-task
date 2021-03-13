@@ -1,0 +1,63 @@
+@import "src/assets/styles/var";
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.college-wrap {
+  width: $card-width;
+}
+
+.college {
+  &__img {
+    img {
+      width: $card-width;
+    }
+  }
+
+  &__headline {
+    margin: 5px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.college-nav {
+  display: flex;
+  justify-content: space-between;
+
+  label {
+    order: 2;
+
+    select {
+      padding: 2px;
+    }
+  }
+
+  ul {
+    order: 1
+  }
+
+  &__list {
+    li {
+      margin: 6px 0;
+    }
+
+    a {
+      font-size: 1.2rem;
+
+      &.active {
+        border-bottom: 2px solid $item-border-color;
+      }
+    }
+  }
+}
+
+.more {
+  margin-top: 10px;
+}

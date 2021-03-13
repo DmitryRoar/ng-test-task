@@ -1,0 +1,21 @@
+{
+  "college": {
+    "name": "innopolis",
+    "about": "About",
+    "courses": "Courses",
+    "teachers": "Teachers",
+    "contacts": "Contacts"
+  },
+  "about": {
+    "headline": "Here is the translation for the \"About\" page"
+  },
+  "courses": {
+    "headline": "Here is the translation for the \"Courses\" page"
+  },
+  "teachers": {
+    "headline": "Here is the translation for the \"Teachers\" page"
+  },
+  "contacts": {
+    "headline": "Here is the translation for the \"Contacts\" page"
+  }
+}

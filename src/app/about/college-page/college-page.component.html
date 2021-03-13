@@ -1,0 +1,76 @@
+<div *ngIf="!isLoading; else loader">
+    <main class="college-wrap" *ngIf="college && translate">
+        <section class="college">
+            <div class="college__img">
+                <img src="{{college.photo}}" alt="college photo">
+            </div>
+
+            <div class="college__headline">
+                <h1>
+                    {{'college.name' | translate}}
+                </h1>
+            </div>
+
+            <nav class="college-nav">
+                <label>
+                    <select
+                      #langSelect
+                      (change)="translate.use(langSelect.value)"
+                    >
+                        <option
+                                *ngFor="let lang of translate.getLangs()"
+                                [value]="lang"
+                                [selected]="lang === translate.currentLang">
+                            {{lang}}
+                        </option>
+                    </select>
+                </label>
+
+                <ul class="college-nav__list">
+                    <li>
+                        <a
+                                [routerLink]="['/about']"
+                                routerLinkActive="active"
+                        >
+                            {{'college.about' | translate}}
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                                [routerLink]="['/courses']"
+                                routerLinkActive="active"
+                        >
+                            {{'college.courses' | translate}}
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                                [routerLink]="['/teachers']"
+                                routerLinkActive="active"
+                        >
+                            {{'college.teachers' | translate}}
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                                [routerLink]="['/contacts']"
+                                routerLinkActive="active"
+                        >
+                            {{'college.contacts' | translate}}
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <div class="more">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
+</div>
+
+<ng-template #loader>
+    <div class="loading">
+        <p class="loading__text">loading...</p>
+    </div>
+</ng-template>
