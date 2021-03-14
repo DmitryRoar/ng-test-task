@@ -2,7 +2,7 @@ import {Component, Inject, OnDestroy, OnInit} from '@angular/core';
 import {Observable, Subscription} from 'rxjs';
 import {TranslateService} from '@ngx-translate/core';
 
-import {COLLEGE_ABOUT} from '../shared/providers/about.providers';
+import {COLLEGE_ABOUT} from '../shared/providers/about.provider';
 
 import {AboutInterface} from '../shared/interfaces/about.interface';
 

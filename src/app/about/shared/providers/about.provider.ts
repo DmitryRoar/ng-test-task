@@ -11,7 +11,7 @@ export const COLLEGE_ABOUT = new InjectionToken<Observable<AboutInterface>>('Abo
       photo: 'assets/img/college-img.jpg',
       about: 'about info',
       media_type: 32313,
-      vimeo_video_id: 534534,
+      vimeo_video_id: 534534
     });
   })
 });
