@@ -18,10 +18,9 @@ export class CollegePageComponent implements OnInit, OnDestroy {
   isLoading = true;
 
   constructor(
-    @Inject(COLLEGE_ABOUT) readonly collegeProvider: Observable<AboutInterface>,
+    @Inject(COLLEGE_ABOUT) private readonly collegeProvider: Observable<AboutInterface>,
     public translate: TranslateService
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
     this.translator();
