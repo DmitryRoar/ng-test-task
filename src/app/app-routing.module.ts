@@ -5,10 +5,10 @@ import {AboutRoutingModule} from './about/about-routing.module';
 
 import {ErrorPageComponent} from './error-page/error-page.component';
 
-
 const routes: Routes = [
     {path: '', loadChildren: () => import('./about/about.module').then(m => m.AboutModule)},
-    {path: 'notfound', component: ErrorPageComponent}
+    {path: 'notfound', component: ErrorPageComponent},
+    {path: '**', redirectTo: 'notfound'}
 ];
 
 @NgModule({
